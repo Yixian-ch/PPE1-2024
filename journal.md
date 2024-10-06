@@ -8,7 +8,7 @@
 > codes généraux de git :
 - git <sous-command> [-options...] [arguments...]
 - git config -global user.email "EMAIL" (lier un dépôt de travail local à son compte GitHub)
-- git clone [opetions...] <URL> (permet de  créer une copie d'un dépôt sur sa machine 
+- git clone [options...] <URL> (permet de  créer une copie d'un dépôt sur sa machine 
 - git status (vérier les modifications, les mises à jours de dossiers par rapport à la version du dépôt)
 - git fetch (il permet de récupérer les modifications du dépôt distant vers notre répertoire local sans les intégrer/appliquer dans notre branche actuelle)
 - git pull (à la différence de fetch, il récupère et intègre les modifications depuis dépôt distant dans notre branche ), le fetch permet de vérifier les conflits avant utiliser pull
