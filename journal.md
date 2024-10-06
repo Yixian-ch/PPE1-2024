@@ -20,5 +20,9 @@
 > Les étiquettes (tag) : 
 - git tag [-a]  <tagname> [référence de commit] -m [message] (le tag est utilisé pour mise en valeur/highlight le commit qu'on veut indiquer, -a permet d'annoter un tage avec un message donné par -m)
 - git push origin <tagname> (pousser un tag vers GitHUb, origin désigne le dépôt distant cloné)
-
+## Ex1 : configuration de Git
+- Création de dépôt depuis GitHub
+- Lier/cloner nos dossiers au dépôt distant (git clone <URL>)
+- Création du journal de bord et la synchronisation
+- Création du tag "Séance1"
  
