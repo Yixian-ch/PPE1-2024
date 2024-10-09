@@ -1,6 +1,6 @@
 # Journal de bord du projet encadré
 ## Création de la clé de sécurité Ed25519  Le 03/10/2024
-> Les commandes : 
+> Travail sur Git:
 - ssh-keygen -t ed25519 (permet de créer la clé)
 - $ eval "$(ssh-agent -s)" (affichera "Agent pid password" si l'agent SSH tourne bien)
 - ssh-qdd git add path d'id (ex : ~/.ssh/id_ed25519)
@@ -25,4 +25,10 @@
 - Lier/cloner nos dossiers au dépôt distant (git clone <URL>)
 - Création du journal de bord et la synchronisation
 - Création du tag "Séance1"
- 
+## Séance 2 
+- pour copier un code faut utiliser `code
+> Commandes vim :
+- passer du mode normal à intertion : `e`
+- retourner au mode normal : `ESC`
+- sauvegarder : `:w`
+- quitter : `:q`
