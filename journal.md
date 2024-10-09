@@ -15,10 +15,11 @@
 - `git add <FILE...>` (on ajoute les modifications faites sur des fichiers avant validation, cette étape est applée la mise-en-place/staging)
 - `git r, <FILE...>` (retier/supprimer un fichier)
 - `git commit [-m message]` (valider les modifications des fichiers suivis/ayant subi des modifications, -m utilisé pour décrire les changements que l'on fait)
+:q
 - `git push` (envoyer les modifications mises en place après commit vers le dépôt disant, la validation finale)
 - `git log` (permet de voir l'ensemble des commits ayant effectués sur le dépôt du plus récent au plus ancien avec les auteur)
 > Les étiquettes (tag) : 
-- `git tag [-a]  <tagname> [référence de commit] -m [message]` (le tag est utilisé pour mise en valeur/highlight le commit qu'on veut indiquer, -a permet d'annoter un tage avec un message donné par -m)
+- `git tag [-a] <tagname> [référence de commit] -m [message]` (le tag est utilisé pour mise en valeur/highlight le commit qu'on veut indiquer, -a permet d'annoter un tage avec un message donné par -m)
 - `git push origin` pousser un tag vers GitHUb, origin désigne le dépôt distant cloné
 ## Ex1 : configuration de Git
 - Création de dépôt depuis GitHub
