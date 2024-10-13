@@ -1,0 +1,15 @@
+     10 Royaume-Uni
+     11 Brésil
+     11 Iran
+     11 Savoie
+     12 Burundi
+     12 Chine
+     14 Turquie
+     14 Ukraine
+     17 lune
+     18 Italie
+     19 Terre
+     21 Russie
+     41 États-Unis
+     47 Paris
+    106 France

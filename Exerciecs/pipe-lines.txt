@@ -1,0 +1,104 @@
+ 2061  touch pipe-lines.txt
+ 2062  touch comptes.txt
+ 2063  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc > comptes.txt 
+ 2064  cat comptes.txt 
+ 2065  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc -l > comptes.txt | echo comptes.txt 
+ 2066  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc -l > comptes.txt | echo  
+ 2067  man echo
+ 2068  cat ~/Desktop/Exercice1/ann/2016/*.ann | echo "Annotations en 2016"| wc -l > comptes.txt 
+ 2069  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc -l > comptes.txt | echo "Annotations en 2016" 
+ 2070  cat ~/Desktop/Exercice1/ann/2017/*.ann | wc -l>> comptes.txt | echo "Annotations en 2017" 
+ 2071  cat ~/Desktop/Exercice1/ann/2018/*.ann | wc -l>> comptes.txt | echo "Annotations en 2018" 
+ 2072  add comptes.txt 
+ 2073  git add comptes.txt 
+ 2074  cat ~/Desktop/Exercice1/ann/2016/*.ann | grep "Location"| wc -l > comptes.txt | echo "Annotations de localisation en 2016" 
+ 2075  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc -l > comptes.txt | echo "Annotations en 2016" 
+ 2076  cat ~/Desktop/Exercice1/ann/2017/*.ann | wc -l>> comptes.txt | echo "Annotations en 2017" 
+ 2077  cat ~/Desktop/Exercice1/ann/2018/*.ann | wc -l>> comptes.txt | echo "Annotations en 2018" 
+ 2078  cat ~/Desktop/Exercice1/ann/2016/*.ann | grep "Location"| wc -l >> comptes.txt | echo "Annotations de localisation en 2016" 
+ 2079  cat ~/Desktop/Exercice1/ann/2017/*.ann | grep "Location"| wc -l >> comptes.txt | echo "Annotations de localisation en 2017" 
+ 2080  cat ~/Desktop/Exercice1/ann/2018/*.ann | grep "Location"| wc -l >> comptes.txt | echo "Annotations de localisation en 2018" 
+ 2081  cat ~/Desktop/Exercice1/ann/2016/*.ann | wc -l > comptes.txt | echo "Annotations en 2016" 
+ 2082  cat ~/Desktop/Exercice1/ann/2017/*.ann | wc -l>> comptes.txt | echo "Annotations en 2017" 
+ 2083  cat ~/Desktop/Exercice1/ann/2018/*.ann | wc -l>> comptes.txt | echo "Annotations en 2018" 
+ 2084  l
+ 2085* cat ~/Desktop/Exercice1/ann/2016/*.ann | grep "Location"| wc -l > lo.txt | echo "Annotations de localisation en 2016" 
+ 2086  cat ~/Desktop/Exercice1/ann/2017/*.ann | grep "Location"| wc -l >> locations.txt | echo "Annotations de localisation en 2017" 
+ 2087  cat ~/Desktop/Exercice1/ann/2018/*.ann | grep "Location"| wc -l >> locations.txt | echo "Annotations de localisation en 2018" 
+ 2088* 
+ 2089  git add locations.txt 
+ 2090  man sort
+ 2091  cat ~/Desktop/Exercice1/ann/2018/*.ann | grep "Location"| sort -n
+ 2092  man cut
+ 2093  cat ~/Desktop/Exercice1/ann/2018/
+ 2094  man cut
+ 2095  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut -f= France
+ 2096  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f= France
+ 2097  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f= T9
+ 2098  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f= T1
+ 2099  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=1
+ 2100  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" 
+ 2101  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=5
+ 2102  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=4
+ 2103  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=1
+ 2104  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=2
+ 2105  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3
+ 2106  man sort
+ 2107  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3 | sort -g
+ 2108  man uniq
+ 2109  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3 | uniq -Dc
+ 2110  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3 | uniq -c
+ 2111  man sort
+ 2112  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3 | sort -c |uniq -c
+ 2113  man sort
+ 2114  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3 | uniq -c | uniq -nr
+ 2115  man sort
+ 2116  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -c | sort -nr
+ 2117  man uniq
+ 2118  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -cd | sort -nr
+ 2119  man uniq
+ 2120* cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -ci | sort -nr
+ 2121  uniq --help
+ 2122  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -cu | sort -nr
+ 2123  man uniq 
+ 2124  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -ci | sort -nr
+ 2125  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location" | cut --f=3  | uniq -cf | sort -nr
+ 2126  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | uniq -c -f=1 | sort -nr
+ 2127  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | uniq -c -f=1,2,3 | sort -nr
+ 2128  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | uniq -c --f=1,2,3 | sort -nr
+ 2129  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  cut| uniq -c | sort -nr
+ 2130  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut --f=3 | uniq -c | sort -nr
+ 2131  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut --f=3 | uniq -c --group | sort -nr
+ 2132  man sort
+ 2133  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -f 3 | uniq -c | sort -nr
+ 2134  man cut
+ 2135* man sort
+ 2136  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -f 3 | sort
+ 2137  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -f 3 | sort | uniq -c | sort -nr
+ 2138  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -d '' -f 3 | sort | uniq -c | sort -nr
+ 2139  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -f 3 | sort | uniq -c | sort -nr
+ 2140  man tr
+ 2141  cat ~/Desktop/Exercice1/ann/2018/*.ann | egrep "Location"  | cut -f 3 | tr -s | uniq -c | sort 
+cat ~/Desktop/Exercice1/ann/2016/*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_2016.txt
+ 1987  l
+ 1988  cat classement_2016.txt 
+ 1989  cat ~/Desktop/Exercice1/ann/2017/*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_2017.txt
+ 1990  cat ~/Desktop/Exercice1/ann/2018/*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_2018.txt
+ 1991  l
+ 1992  git add classement_2016.txt classement_2017.txt classement_2018.txt 
+ 1993  cat ~/Desktop/Exercice1/ann/2018/*_01*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_01_2018.txt
+ 1994  ;
+ 1995  l
+ 1996  cat classement_01_2018.txt 
+ 1997  cat ~/Desktop/Exercice1/ann/*_01*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_janvier.txt
+ 1998  cat ~/Desktop/ann/*_01*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_janvier.txt
+ 1999  rm classement_01_2018.txt 
+ 2000  ls classement_janvier.txt 
+ 2001  cat classement_janvier.txt 
+ 2002  cat ~/Desktop/ann/*_02_*.ann | grep "Location"| cut -f 3 | sort -d | uniq -ci | sort -n | tail -n 15 > classement_février.txt
+ 2003  cat classement_février.txt 
+ 2004  ls
+ 2005  git add classement_janvier.txt classement_février.txt 
+ 2006  cd ..
+ 2007  history
+
