@@ -15,7 +15,6 @@
 - `git add <FILE...>` (on ajoute les modifications faites sur des fichiers avant validation, cette étape est applée la mise-en-place/staging)
 - `git r, <FILE...>` (retier/supprimer un fichier)
 - `git commit [-m message]` (valider les modifications des fichiers suivis/ayant subi des modifications, -m utilisé pour décrire les changements que l'on fait)
-:q
 - `git push` (envoyer les modifications mises en place après commit vers le dépôt disant, la validation finale)
 - `git log` (permet de voir l'ensemble des commits ayant effectués sur le dépôt du plus récent au plus ancien avec les auteur)
 > Les étiquettes (tag) : 
@@ -41,4 +40,6 @@
 - j'ai réussi à résoudre le premier problème, en fait avant de classer, il faut ranger les réultats de lieux selon lon alphabet après egrep, comme ça les lieux répétés sont groupés ensemble, la commande est `sort -d`, et la commande `uniq -c` peut les compter comme dans une seule ligne. 
 - pour la dernière question, classer les lieux selon le moi des années confudues, j'ai dû copié les fichiers `.ann` d'années différentes dans un dossier, comme ça je peux les sélectionner dans la même adresse.
 > Notes
-- `https://www.notion.so/Programmation-et-Projet-encadr-10c8e2084b0d80e3a62ed664e64a895a?pvs=4` lien vers mes notes.
+- `https://www.notion.so/Programmation-et-Projet-encadr-10c8e2084b0d80e3a62ed664e64a895a?pvs=4` lien vers mes notes
+- pour pousser un tag il faut ajouter le nom du tage que tu veux, EX : `git push origin tag_name`. Sinon, le tag ne sera pas envoyé.
+- `git commit - "message" <chemin_du_fichier>` pour laisser un message au fichier spécifique.
