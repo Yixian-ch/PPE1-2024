@@ -1,4 +1,5 @@
 "tu ne me trouveras jamais"
+"il doit rester après la correction"
 # Journal de bord du projet encadré
 ## Création de la clé de sécurité Ed25519  Le 03/10/2024
 > Travail sur Git:
