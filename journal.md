@@ -1,4 +1,3 @@
-"il doit rester après la correction"
 # Journal de bord du projet encadré
 ## Création de la clé de sécurité Ed25519  Le 03/10/2024
 > Travail sur Git:
@@ -44,3 +43,8 @@
 - `https://www.notion.so/Programmation-et-Projet-encadr-10c8e2084b0d80e3a62ed664e64a895a?pvs=4` lien vers mes notes
 - pour pousser un tag il faut ajouter le nom du tage que tu veux, EX : `git push origin tag_name`. Sinon, le tag ne sera pas envoyé.
 - `git commit - "message" <chemin_du_fichier>` pour laisser un message au fichier spécifique.
+> Git more exercices
+- j'ai d'abord ajouter une nouvelle ligne qui contient des erreurs, pusi `add journal`, puis `commit` avec le message I AM ERROR
+- puis j'ai ajouté une autre ligne qui doit rester après la correction de l'erreur, pareil, j'ai add and commut
+- maintenant, j'ai push, et oh là, je dois retirer la mauvaise information en gardant le bon changement, donc avec `git log` j'ai récupéré le SHA du mauvais changement, avec `git revert SHA`, j'ai rencontré une erreur qui indique `Auto-merging journal.md CONFLICT (content): Merge conflict in journal.md. error: could not revert 58c6c0b... I AM ERROR` 
+- donc j'ai dû modifié manuellement le contenu dans le journal, puis add journal et `revert --continue`.
