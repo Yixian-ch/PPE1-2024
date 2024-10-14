@@ -48,4 +48,41 @@
 - puis j'ai ajouté une autre ligne qui doit rester après la correction de l'erreur, pareil, j'ai add and commut
 - maintenant, j'ai push, et oh là, je dois retirer la mauvaise information en gardant le bon changement, donc avec `git log` j'ai récupéré le SHA du mauvais changement, avec `git revert SHA`, j'ai rencontré une erreur qui indique `Auto-merging journal.md CONFLICT (content): Merge conflict in journal.md. error: could not revert 58c6c0b... I AM ERROR` 
 - donc j'ai dû modifié manuellement le contenu dans le journal, puis add journal et `revert --continue`.
-- "correction d'erreurs"
+> Git conflits
+- `2141  git commit -m "creation de conflit" journal.md 
+ 2142  git status 
+ 2143  git stash push -m "Conservation des changements séance 3"
+ 2144  git log
+ 2145  git 
+ 2146  git reset 64ff1f8b0b260adad6d1e8c3a77d8841f4eef735
+ 2147  git status
+ 2148  got pull
+ 2149  git pull
+ 2150  commit journal.md 
+ 2151  git commit journal.md 
+ 2152  git pull
+ 2153  git stash push -m "Conservation des changements séance 3"
+ 2154  vim journal.md 
+ 2155  git stash push -m "Conservation des changements séance 3"
+ 2156  git status 
+ 2157  git add journal.md 
+ 2158  git commit journal.md 
+ 2159  git stash push -m "Conservation des changements séance 3"
+ 2160  git status
+ 2161  git stash main push -m "Conservation des changements séance 3"
+ 2162  git stash list
+ 2163  git status
+ 2164  git rebase --continue
+ 2165  l
+ 2166  git stash push -m "Conservation des changements séance 3"
+ 2167  git log
+ 2168  git reset HEAD~
+ 2169  vim journal.md 
+ 2170  git status
+ 2171  git log
+ 2172  git stash push -m "Conservation des changements séance 3"
+ 2173  git stash list
+ 2174  git stash pop 0
+ 2175  vim journal.md 
+ 2176  history`
+- "cette ligne va être mis de côté"
