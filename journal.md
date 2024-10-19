@@ -69,20 +69,63 @@
  2158  git commit journal.md 
  2159  git stash push -m "Conservation des changements séance 3"
  2160  git status
+
  2161  git stash main push -m "Conservation des changements séance 3"
  2162  git stash list
+
+
  2163  git status
+
  2164  git rebase --continue
+
  2165  l
+
  2166  git stash push -m "Conservation des changements séance 3"
+
  2167  git log
+
  2168  git reset HEAD~
- 2169  vim journal.md 
+
+ 2169  vim journal.md
+ 
  2170  git status
+ 
  2171  git log
+
  2172  git stash push -m "Conservation des changements séance 3"
+
  2173  git stash list
+
  2174  git stash pop 0
+
  2175  vim journal.md 
- 2176  history`
 - "cette ligne va être mis de côté"
+## Séance 4 
+> Correction des exercices pipelines et more git
+- `echo` est utilisé pour écrire des messages dans un fichier, et par défaut, il va retourner à la ligne quand il y a une nouvelle ligne.
+- `grep` a la fonction de `cat`, parce qu'il cherche d'abord les fichiers et les filtre ensuite. Ex : `egrep location PATH`
+- `uniq` cherche les lignes qui se répètent et se suivent les unes après les autres. Donc il vaut mieux grouper avant les entrées standards. Ex : `egrep Location PATH | sort | uniq -c`  
+- `sort` par défaut suit l'odrdre alphabétique
+- `tail -n` par défaut nous donne 10 dernières lignes
+## Séance5
+> explication du code vu au cours
+- `#!/usr/bin/bash` c'est la tête de ce fichier qui indique à l'interpréteur bash que ce fichier doit être interprété comme bash
+- `if [ $# -ne 1 ]` [ ], tout ce qui est dedans, c'est la condition de l'instruction if. $# est un variable préterminé qui a la fonction de compter le nombre d'arguments donnés, il exite aussi $$ qui peut savoir le PID du programme en exécution; $! permet de vérifier si le programme a été bien exécuté ou pas, si $! est 0, c'est oui, sinon c'est non. -ne est un opérateur de condition qui vérifie si le nombre d'argumets n'égale à 1, si oui, la condition est vraie, il va exécuter les coomandes dans if, sinon il va pas l'exécuter
+- then est d'après moi une barière qui sépare if et les commandes au dessus; et sémantiquement, il indique aux programmeurs d'entrer les commandes au-dessus
+-`echo "..."`; echo égale imprimer, il va imprimer tout ce qui est dans les guillemets par la sortie standard
+- `exit` signifie quitter if, bienqu'il reste des commandes à exécuter 
+- `fi` signigie la fin de if
+- `FICHIER_URLS=$1`, ici, on donne la valeur du premier argument positionnel au variable nommé FICHEIR_URLS. Argument positionel : argument donné de l'extérieur du script, par exemple via le terminal, il est changeable
+- `OK=0; NOK=0`, on donne la valeur d'entier 0 aux variable OK et NOK
+- `while` est une boucle qui va se répéter tant que la condition est vraie, le ";" est-il nécessaire ?
+- `read -r LINE` est comme input dans Python, il demande intéractivement à l'utilisateur de donner une valeur au variable nommé LINE, -r est utilisé pour conservé le blackflash de l'entrée. (réponse venue de fameux CHATGPT, digérée par moi)
+- `do` comme then
+- if la valeur du variable LINE contient à l'expression réguière https://, l'opérateur ^ indique que le mot doit apparaître au début de la phrase, de l'entrée, s? signgie un s optionnel. =~ signigie la correspondance
+- pour les regex ils sont exprimés dans les crochets [regex]
+- `then echo`, puis imprime
+- `OK=$(expr $OK + 1)`, donne la value de $OK + 1 à OK, dans bash pour l'opération il faut utiliser soit $(expr ) soit $[] soit $(())
+- `else` si la condition if n'est pas remplie, alors exécute les commades au dessus d'else
+- `echo; NOK..` imprime, la valeur de NOK + 1
+- `fi` fin de if
+- `done` fin de boucle while, donne la valeur de $FHCHIER_URLS à LINE
+- `echo` imprime le nombre d'entrées qui sont le URL et le nomdre des autres qui ne le sont pas.
