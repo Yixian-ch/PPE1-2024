@@ -1,0 +1,10 @@
+#!/bin/bash
+for ((n=1; n<=3; n++))
+do
+	read -p "enter year from 2016 to 2018: " YEAR
+	read -p "enter the type annotation u want to count: " TYPE
+	path=$HOME/Desktop/Exercice1/ann/$YEAR
+	echo "$YEAR $TYPE total annotation:" 
+	grep $TYPE $path/*.ann | wc -l 
+done
+echo "if $? is 0, it is ok"
