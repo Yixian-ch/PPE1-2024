@@ -1,10 +1,29 @@
 #!/bin/bash
-for ((n=1; n<=3; n++))
+# n is used to count times of search
+# 3 times search each search for each year distinctly
+# users can search for a same year for multiple times but once he has searched 3 years for at least one time, the programme ends.
+# problem : this program can not distinguish years from 2016 to 2018, if user enter 2016 for 3 times, chances will be consummed.
+# for (()) loop, to control the increment expression
+# ((...)) is used for arithmetic evalution
+for ((n=3; n>=1; ))
 do
 	read -p "enter year from 2016 to 2018: " YEAR
 	read -p "enter the type annotation u want to count: " TYPE
-	path=$HOME/Desktop/Exercice1/ann/$YEAR
-	echo "$YEAR $TYPE total annotation:" 
-	grep $TYPE $path/*.ann | wc -l 
+	path=$HOME/Desktop/S5/Exercice1/ann/$YEAR
+	if [ $YEAR -eq 2016 ]; then	
+		echo "$YEAR $TYPE total annotation:" 
+		grep $TYPE $path/*.ann | wc -l
+		n=$(($n-1))
+	elif [ $YEAR -eq 2017 ]; then
+		echo "$YEAR $TYPE total annotation:"
+		grep $TYPE $path/*.ann | wc -l
+		n=$(($n-1))
+	elif [ $YEAR -eq 2018 ]; then
+		echo "$YEAR $TYPE total annotation:"
+		grep $TYPE $path/*.ann | wc -l
+		n=$(($n-1))
+	else
+		echo "type wrong"
+	fi	
 done
 echo "if $? is 0, it is ok"
