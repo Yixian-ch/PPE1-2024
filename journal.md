@@ -50,27 +50,47 @@
 - donc j'ai dû modifié manuellement le contenu dans le journal, puis add journal et `revert --continue`.
 > Git conflits
 - `2141  git commit -m "creation de conflit" journal.md 
- 2142  git status 
+ 2142  git status
+ 
  2143  git stash push -m "Conservation des changements séance 3"
+
  2144  git log
+ 
  2145  git 
+
  2146  git reset 64ff1f8b0b260adad6d1e8c3a77d8841f4eef735
+
  2147  git status
+
+
  2148  got pull
+
  2149  git pull
+
  2150  commit journal.md 
+
  2151  git commit journal.md 
+
  2152  git pull
+
  2153  git stash push -m "Conservation des changements séance 3"
+
  2154  vim journal.md 
+
  2155  git stash push -m "Conservation des changements séance 3"
+
  2156  git status 
+
  2157  git add journal.md 
+
  2158  git commit journal.md 
+
  2159  git stash push -m "Conservation des changements séance 3"
+
  2160  git status
 
  2161  git stash main push -m "Conservation des changements séance 3"
+
  2162  git stash list
 
 
@@ -110,7 +130,8 @@
 ## Séance5
 > explication du code vu au cours
 - `#!/usr/bin/bash` c'est la tête de ce fichier qui indique à l'interpréteur bash que ce fichier doit être interprété comme bash
-- `if [ $# -ne 1 ]` [ ], tout ce qui est dedans, c'est la condition de l'instruction if. $# est un variable préterminé qui a la fonction de compter le nombre d'arguments donnés, il exite aussi $$ qui peut savoir le PID du programme en exécution; $! permet de vérifier si le programme a été bien exécuté ou pas, si $! est 0, c'est oui, sinon c'est non. -ne est un opérateur de condition qui vérifie si le nombre d'argumets n'égale à 1, si oui, la condition est vraie, il va exécuter les coomandes dans if, sinon il va pas l'exécuter
+- `if [ $# -ne 1 ]` [ ], tout ce qui est dedans, c'est la condition de l'instruction if.`$#` est un variable préterminé qui a la fonction de compter le nombre d'arguments donnés 
+- il exite aussi $$ qui peut savoir le PID du programme en exécution; `$!` qui permet de vérifier si le programme a été bien exécuté ou pas, si $! est 0, c'est oui, sinon c'est non. -ne est un opérateur de condition qui vérifie si le nombre d'argumets n'égale à 1, si oui, la condition est vraie, il va exécuter les coomandes dans if, sinon il va pas l'exécuter
 - then est d'après moi une barière qui sépare if et les commandes au dessus; et sémantiquement, il indique aux programmeurs d'entrer les commandes au-dessus
 -`echo "..."`; echo égale imprimer, il va imprimer tout ce qui est dans les guillemets par la sortie standard
 - `exit` signifie quitter if, bienqu'il reste des commandes à exécuter 
@@ -129,3 +150,11 @@
 - `fi` fin de if
 - `done` fin de boucle while, donne la valeur de $FHCHIER_URLS à LINE
 - `echo` imprime le nombre d'entrées qui sont le URL et le nomdre des autres qui ne le sont pas.
+## Séance 6
+> Manipulation de web
+- HTML : langage de balisage pour les sites web qui permet de construire une site web
+- HTTP : le protocole ou la clé permet aux navigateurs de communiquer avec les serveurs. URL-HTTP-DONNÉES-RÉPONSE
+- Nos préoccupations : récupérer et traiter les données texuelles
+- `lynx` navigateur en terminal. `-dump` lister toutes les données d'une page web sans navigation. `-nolist` lister seulement les informations terxuelles sans les liens. Possible d'utiliser les pipelines pour trier les infos par exemple. `lynx URL | grep "Name"
+- type de réponse : 1XX; 200 (réussite) ; 3XX (redirections) ; 4XX (erreurs du client) ; 5XX (erreurs du serveur)
+- `curl` permet de récupérer les données depuis un URL dans le format de strandard output. `-I` seulement les entêtes. `-o` stocker les résultats dans un fichier. 
