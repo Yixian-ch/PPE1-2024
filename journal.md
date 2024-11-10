@@ -159,11 +159,14 @@
 - type de réponse : 1XX; 200 (réussite) ; 3XX (redirections) ; 4XX (erreurs du client) ; 5XX (erreurs du serveur)
 - `curl` permet de récupérer les données depuis un URL dans le format de strandard output. `-I` seulement les entêtes. `-o` stocker les résultats dans un fichier.
 ## Séance 7
+> corrections
+- attentions à regex `$` est la fontière de la fin du mot, après `$` le mot ne doit pas être suivi d'aucun caractère
+- `if ! [[ $mois =~ ^[0-9]{2}$ ]]`, `$` ensures that the regex ends exactly with 2 int
 > script
 - critères de script : simplicité (3 profondeurs maximum) ; précision (contrôle bien les résultat) ; lisibilité 
 > nouvelles commandes
 - `read`, lire un texte ou un fichier phrase par phrase, `-r` permet de traiter l'antislash comme un caractère normal mais pas un wildcard
-- `[[ texte =~ regex ]]` permet d'utiliser les expressions régulières après =~
+- `[[ texte =~ regex || ... || ...]]` permet d'utiliser les expressions régulières après =~.
 - `$(expr int +-...)` permet d'avoir les opérations 
 - `V=$()` $() permet d'assaiger le résultat de commandes à la variable, pas d'espace avant ou après paranthèse
 > problèmes
