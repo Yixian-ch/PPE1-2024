@@ -157,4 +157,17 @@
 - Nos préoccupations : récupérer et traiter les données texuelles
 - `lynx` navigateur en terminal. `-dump` lister toutes les données d'une page web sans navigation. `-nolist` lister seulement les informations terxuelles sans les liens. Possible d'utiliser les pipelines pour trier les infos par exemple. `lynx URL | grep "Name"
 - type de réponse : 1XX; 200 (réussite) ; 3XX (redirections) ; 4XX (erreurs du client) ; 5XX (erreurs du serveur)
-- `curl` permet de récupérer les données depuis un URL dans le format de strandard output. `-I` seulement les entêtes. `-o` stocker les résultats dans un fichier. 
+- `curl` permet de récupérer les données depuis un URL dans le format de strandard output. `-I` seulement les entêtes. `-o` stocker les résultats dans un fichier.
+## Séance 7
+> script
+- critères de script : simplicité (3 profondeurs maximum) ; précision (contrôle bien les résultat) ; lisibilité 
+> nouvelles commandes
+- `read`, lire un texte ou un fichier phrase par phrase, `-r` permet de traiter l'antislash comme un caractère normal mais pas un wildcard
+- `[[ texte =~ regex ]]` permet d'utiliser les expressions régulières après =~
+- `$(expr int +-...)` permet d'avoir les opérations 
+- `V=$()` $() permet d'assaiger le résultat de commandes à la variable, pas d'espace avant ou après paranthèse
+> problèmes
+- `echo $nombre_de_ligne   $line   $code_HTTP	$nombre_mots	$encodage` lorsque j'affiche le résultat de l'extraction, si je met `$nombre_mots` à la fin, l'affichage est bizarre. Pour le moment, je n'ai pas trouvé la solution et la raison, peut être cela est dû à la manière dont j'affecte cette variable ? `nombre_mots=$(curl -s $line | wc -w)`
+> différence entre `cat` et `read`
+- cat lire un fichier et imprime ce qu'il concatène de ce fichier dans la sortie standard, c'est-à-dire il retourne qqch sans d'autres opérations spécifiques
+- mais read, si on lui donne l'aderesse du fichier, il va retourner une erreur, il ne permet pas d'afficher le fichier, mais il le stock et il attend à l'assignher aux variables

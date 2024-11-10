@@ -1,0 +1,31 @@
+#!/bin/sh
+path=./fr.txt
+result=$(cat $path)
+nombre_de_ligne=1
+for line in $result
+do
+	if [[ $line =~ ^https?:// ]]
+	then
+		encodage=$(curl -sI $line | egrep -io 'charset=.*' | cut -d '=' --f=2)
+		# cette fois on sait que le format de output est `charset=UTF-8`, donc il faut utiliser `=` comme le séparateur.
+		if [[ $encodage =~ UTF-8 ]]
+# si l'encodage est en UTF-8, nous allons extracter le texte
+		then
+			code_HTTP=$(curl -sI $line | egrep HTTP | cut -d ' ' --f=2)
+			# `code_HTTP=$(curl -sI $line | egrep HTTP)` c'est pas parfait, on aura des résultats comme HTTP/2 200 ..., je veut seulement les codes, donc comme on a fait pour ann, j'utilise cut avec -d ' ' --f=2 qui délimite le séparateur est espace et selectionne la deuxième colonne
+			# -s silence permet de ne pas afficher les infos de precessus -I que les en-têtes HTTP
+			nombre_mots=$(curl -s $line | wc -w)
+			# si on veut stocker le résultat des commandes dans une variable il faut utiliser $(commanndes) pour que bash puisse comprendre qu'on veut affecter le résultat de commandes à notre variable
+			# exemple B=echo help et B=$(echo help), dans le premier on n'a pas affecté une valeur à notre variable, elle n'existe pas si on veut l'imprimer, parce qu'elle va devenir une variable temporelle/argument pour la commande qui suit, une fois elle est exécutée, cette variable va disparaître
+			# wc -w combien de mots
+			echo $nombre_de_ligne   $line   $code_HTTP	$nombre_mots	$encodage
+		else
+# sinon, seulement un message
+			echo "$nombre_de_ligne encodage non UTF-8"
+		fi
+	else
+		echo "$nombre_de_ligne $line format non conforme"
+	fi
+	nombre_de_ligne=$(expr $nombre_de_ligne + 1)
+done
+
