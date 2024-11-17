@@ -174,3 +174,33 @@
 > différence entre `cat` et `read`
 - cat lire un fichier et imprime ce qu'il concatène de ce fichier dans la sortie standard, c'est-à-dire il retourne qqch sans d'autres opérations spécifiques
 - mais read, si on lui donne l'aderesse du fichier, il va retourner une erreur, il ne permet pas d'afficher le fichier, mais il le stock et il attend à l'assignher aux variables
+## Séance 8
+> correction
+- `cat` lire le contenu token par token séparé par l'espace, si l'URL contient des espaces, cat va écraser notre URL> HTML
+- Un langage de balise pour représenter des pages web. Hyper Text Markup Language
+- SGML(Standard Generalized Markup Language)-HTML|XML 
+> Balise
+- Frontières des Zones qui peut inclure des balises comme une grande boîte reste à clairifier.
+- élément vide : un élément en HTML qui ne peut pas avoir de noeud enfant
+- si un balise est inclus dans l'autre, il faut utilier une échancrure
+- syntaxe : `<balise>` `</balise>`. autofermantes/vides `<balise/>`
+- `<input type="text" />` en HTML par fois on ajoute une barre oblique de fin aux éléments vides afin de les rendre compatibles avec XHTML et pour la lisibilité.
+- balise de base : `<html>  <head>...</head> <body>...</body>   </html>`
+- balise de tableau : `<table> <tr><th>livre</th></tr><tr><td>Joker</td><td>10Mo</td></tr></table>`
+> list d'éléments vides
+- `<area>` 
+- `<base>` 
+- `<br>` retour chariot
+- `<col>` 
+- `<embed>`
+- `<hr>`
+- `<img>`
+- `<input>`
+- `<link>`
+- `<meta>`
+- `<param>`
+- `<source>`
+- `<track>`
+- `<wbr>` 
+ 
+
