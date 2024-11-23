@@ -11,20 +11,15 @@
 nombre_de_ligne=1
 echo "<html>
 <head>
-</head>
-<body>"
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+</head>"
+echo "<body>"
 
-echo "<table>"
+echo "<table class='table is-bordered is-striped is-fullwidth is-hoverable'>"
 echo "<thead>"
-echo "<tr>
-<th>Numero</th>
-<th>Lien</th>
-<th>Code</th>
-<th>Encodage</th>
-<th>Nombre de mots</th>
-</tr>"
-echo "</thead>"
-# echo "<tbody>"
+echo "<tr><th>Numero</th><th>Lien</th><th>Code</th><th>Encodage</th><th>Nombre de mots</th></tr>
+</thead>"
+echo "<tbody>"
 while read -r line;
 # `read`, lire un texte ou un fichier phrase par phrase, `-r` permet de traiter l'antislash comme un caractère normal mais pas un wildcard
 do
@@ -58,19 +53,19 @@ then
 		echo -e "<tr><td>$nombre_de_ligne</td><td>$line</td><td>$code_HTTP</td><td>$encodage</td><td>$nombre_mots</td></tr>"
 	else
 # sinon, seulement un message
-		echo -e "<tr><td>$nombre_de_ligne</td><td>$line</td><td>$code_HTTP</td><td>encodage non UTF-8</td>"
+		echo -e "<tr><td>$nombre_de_ligne</td><td>$line</td><td>$code_HTTP</td><td>encodage non UTF-8</td><td>NULL</td></tr>"
 	fi
 else
-	echo -e "<tr><td>$nombre_de_ligne</td><td>$line</td><td>format non conforme</td>"
+	echo -e "<tr><td>$nombre_de_ligne</td><td>$line</td><td>format non conforme</td><td>NULL</td><td>NULL</td></tr>"
 fi
 	nombre_de_ligne=$(expr $nombre_de_ligne + 1)
 	# pour faire les additions, opérateur est $(expr )
 done < "/home/xingyuchen/Desktop/PPE_2024/PPE1-2024/miniprojet/urls/fr.txt";
 echo "
 </tbody>
+</table>
 </body>
-</html>
-"
+</html>"
 	# "<" permet de donner comme input pour cette boucle
 #================================================= QUESTION 1 ===================================================
 # avec cat on peut faire la même chose... c'est le fonctionnement qui est différent je pense, j'ai joint le script de cat
