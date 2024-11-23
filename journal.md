@@ -202,5 +202,38 @@
 - `<source>`
 - `<track>`
 - `<wbr>` 
- 
-
+## Séance 9
+> HTML hiérarchies
+- Éléments : les chevrons comme <p>, <div>...
+- Attributs : spécifier les éléments / ajouter plus d'informations à un élément comme class, id, href..
+> Plus de HTML
+ > <a>
+ - `<a attribut></a>` `<a href "">hypertext</a>` Ce tag permet de définir un hypyertext(texte contient un lien) qui permet de naviguer entre les sites web
+ - `<a href "path/file_todownload" download="optional name">hypertext</a>` l'attribut download permet de télécharger le contenu du hypertext au lien de naviguer
+ - `<a href "" type="text/html">hypertext</a>` attribut type permet de dire aux navigateurs  le type de document lié
+ - ...
+ > <p>
+ - `<p>text</p>` une ligne de texte
+ - `<p css>text</p>`
+ - `<p>this is a text which contains a<a href "site">link</a></p>` possible d'avoir les neuds d'enfants 
+ > Titre
+ - `<h1></h1>` ...` entête niveau 1 ...
+ > Formattage
+ - `<b>text</b>` texte gras
+ - `<i>text</i>` texte italique
+ - `<em>/<strong>text</em>/</strong>` emphase
+ > Liste
+ - `<ul><li></li></ul>` unordered list
+ - `<ol><li></li></ol>` ordered list`
+ > Classe
+ - Est un arribut qui donne un nom local à un élément pour l'appeler après dans d'autres élements  comme dans Python la nommination d'une variable
+ - `<style>.name{color=white}</style> <div class="name"><p>Michel</p></div> <div class="age"><p>18</p></div>`
+ - `.class_name` pour citer une classe
+ - <element class="A B C"></element>` on peut utiliser plusieurs morceaux de mots pour nommer une classe, afin d'appliquer différents style/attributs à notre classe
+> CSS
+- Casvading Style Sheets 
+- Un langage de StyleSheet qui permet de modifier le style des élément en cascade (style appliquera aussi à tous ses enfants)
+- `Selectors {property:value;}` Syntaxe de CSS. selectors définissent les éléments de HTML
+- `<link href="css_path" rel="stysheet">` pour utiliser un CSS dans un fichier HTML rel veut dire relation entre le ficher actuel et le ficher lié
+> Bulma CSS
+- libraire de CSS

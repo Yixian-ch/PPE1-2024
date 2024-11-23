@@ -1,0 +1,80 @@
+459  mkdir ./Exercice1
+  460  cd ./Exercice1
+  461  wget http://plurital.org/ppe1/seance1/archive-39.zip
+  462  unzip --h
+  463  unzip archive-39
+  464  ls
+  465  mkdir txt img ann docs
+  466  ls
+  467  mv *.txt ./txt
+  468  mv *.ann ./ann
+  469  mv *.{jpg,png,svg,gif,JPG} ./img
+  470  ls
+  471  mv *.jpeg *.PHG ./img
+  472  mv *.jpeg *.PNG ./img
+  473  mv {*.jpeg,*.PNG} ./img
+  474  ls
+  475  mv *.odt *.docx ./docs
+  476  mv *.GIF ./img
+  477  ls
+  478  mv *.webp *.pdf  ./img
+  479  lf
+  480  ls
+  481  cd ./txt
+  482  ls
+  483  mkdir ./2016 ./2017 ./2018
+  484  mv 2016*.txt ./2016
+  485  mv mv 2017*.txt ./2017 2018*.txt ./2018
+  486  ls
+  487  cd ./2016
+  488  ls
+  489  cd ../
+  490  cd ./2018
+  491  ls
+  492  mv 2017*.txt ~/Desktop/Exercice1/txt
+  493  rm -rf 2017
+  494  ls
+  495  cd ../
+  496  history
+  497  mkdir ./2017
+  498  mv 2017*.txt ./2017
+  499  ls
+  500  cd ../
+  501  cd ./ann
+  502  ls
+  503  mkdir ./2016 ./2017 ./2018
+  504  mv 2016*.ann ./2016
+  505  mv 2017*.ann ./2017
+  506  mv 2018*.ann ./2018
+  507  ls
+  508  cd ../
+  509  cd ./img
+  510  ls
+  511  mkdir ./Taipei ./Washington ./Tokyon ./Paris ./Kyoto ./Berlin ./Rome
+  512  mv *-Paris.* ./Paris
+  513  ls
+  514  cd ./Paris
+  515  ls
+  516  cd ../
+  517* mv -Paris_*.* ./Paris-
+  518  mv -*Paris_*.* ./Paris
+  519  mv *-Paris*.* ./Paris
+  520  mv *-Tokyo*.* ./Tokyo
+  521  ls
+  522  mv *-Tokyo*.* ./Tokyon
+  523  mv Tokyon Tokyo
+  524  ls
+  525  mv *-Washington*.* ./Washington
+  526  mv *-Taipei*.* ./Taipei
+  527  mv *-Kyoto*.* ./Kyoto
+  528  mv *-Rome*.* ./Rome
+  529  mv *-Berlin*.* ./Berlin
+  530  ls
+  531  cd ../
+  532  ls
+  533  rm -rf archive-39
+  534  ls
+  535  rm archive-39.zip
+  536  ls
+  537  cd ../
+  538  zip -r Exercice1.zip Exercice1 # pourquoi j'arrive pas à comprimer mon directory en utilisant cette commande ?
