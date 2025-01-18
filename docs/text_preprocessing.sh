@@ -10,6 +10,6 @@
 # tr '[:upper:]' '[:lower:]' permet de remplacer les upper cases par les lower case ou tr [A-Z] [a-z]
 # mais il peut pas de remplacer les carctères dracrités en capitale.
 # maintenant il faut ajouter le grep pour trier les résultats
-tr [A-Z] [a-z] < ./candide.txt | tr -d [:punct:] | grep -i -o -E "\b[a-z]+\b\s+?\b[a-z]+\b"
+tr [A-Z] [a-z] < ./candide.txt | tr -d [:punct:] | grep -i -o -E "\b[a-z]+\b\s\b[a-z]+\b"
 # on peut pas stocker le résultat dans une variable, ça va détruire la forme du texte
 # dans ce cas-là ce script va return le résultat des commadnes comme dans Python

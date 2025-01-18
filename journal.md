@@ -144,7 +144,7 @@
 - if la valeur du variable LINE contient à l'expression réguière https://, l'opérateur ^ indique que le mot doit apparaître au début de la phrase, de l'entrée, s? signgie un s optionnel. =~ signigie la correspondance
 - pour les regex ils sont exprimés dans les crochets [regex]
 - `then echo`, puis imprime
-- `OK=$(expr $OK + 1)`, donne la value de $OK + 1 à OK, dans bash pour l'opération il faut utiliser soit $(expr ) soit $[] soit $(())
+- `OK=$(expr $OK + 1)`, donne la value de '$OK + 1' à OK, dans bash pour l'opération il faut utiliser soit $(expr ) soit $[] soit $(())
 - `else` si la condition if n'est pas remplie, alors exécute les commades au dessus d'else
 - `echo; NOK..` imprime, la valeur de NOK + 1
 - `fi` fin de if
@@ -238,3 +238,23 @@
 - libraire de CSS
 > Bash
 - `echo "''"` quand on a des "" dans echo, il faut utiliser '' ou wildcard / pour transformer
+## Séance 04/12/2024
+> Read
+- Syntaxe : `Read name_variable`, options : -p (imprimer une information avant de lire l'entrée); -t (mettre une durée de l'attente de saisir); -n (limiter le nombre de caractères de l'entrée); -s (Disables echoing the input); -d (définir un séparateur au lieu d'une nouvelle linge)
+- Capture l'entrée standard qui est possible d'être stocké dans une variable
+## Révision 10/12/2024
+> Single quotes vs double quotes
+- Single Quotes, everything inside is treated as a literal string which means variables, commands or special characters like '*', `/`, `$` or `\` are treated as plain text. 
+> notion of Expansion and Substitution
+- Expansion refers ** to the process where shell automatically modifies or 'expands' certain patterns or variables within a string or command before executing it
+- `VAR = "hello" echo $VAR`, this is a variable expansio, shell does not traite VAR as a string, but an variable
+- `echo "Current directory: $(pwd)"`, command substitution, `$(pwd)` is not treated as a string
+- `echo {1..5}`, brace expansion
+- `echo *.fileformat` * will expanded to a wildcard to match in the cwd all file in given format
+## Website_Projet
+> suivi
+- lors de faire l'extraction de raw texte, j'ai rencontré des url qui contiennent que des pdf ou images, avec la commande lynx -nolist -dump url, elle peut savoir qu'il s'agit de l'image, mais elle peut pas faire l'extration de texte dans ce cas-là, je vais le laisser à côté et revenir plus tard si possible.
+- fini de dump de 50 url
+## Séance 11/12/2024
+> Outils de web scraping
+- minet
